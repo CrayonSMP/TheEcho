@@ -1,0 +1,9 @@
+recipes:
+  theecho:bronze_ingot:
+    type: compoundingfurnace
+    fuel: "minecraft:coal[amount=2]"
+    processing_tool: "theecho:hammer"
+    processing_time: 200
+    input1: "minecraft:copper_ingot[amount=3]"
+    input2: "minecraft:iron_ingot"
+    output: "theecho:bronze_ingot[amount=2]"

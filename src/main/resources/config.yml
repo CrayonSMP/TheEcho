@@ -1,0 +1,19 @@
+debug-mode: false
+compounding-furnace:
+  # MiniMassage support
+  inventory-title: "Compounding Furnace"
+  slots:
+    input1-slot: 10
+    input2-slot: 11
+    fuel-slot: 12
+    output-slot: 14
+    process-tool-slot: 15
+    process-slot: 16
+  items:
+    # first item lowest state last highest (right befor finish).
+    processing-items:
+      - "item_a"
+      - "item_b"
+      - "item_c"
+      - "item_d"
+      - "item_e"

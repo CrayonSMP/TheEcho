@@ -1,0 +1,11 @@
+name: TheEcho
+main: de.tamashiimon.theecho.TheEcho
+version: "v0.0.1"
+author: TamashiiMon
+description: Something caused is going on.
+api-version: 26.3
+libraries:
+  - com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.18.2
+commands:
+  theecho:
+    description: Main command for something cursed.

@@ -1,4 +1,4 @@
-package de.tamashiimon.theecho.features.blocks;
+package de.tamashiimon.theecho.features;
 
 import de.tamashiimon.theecho.features.blocks.compounding_furnace.CompoundingFurnaceBehavior;
 import de.tamashiimon.theecho.features.blocks.compounding_furnace.CompoundingFurnaceListener;

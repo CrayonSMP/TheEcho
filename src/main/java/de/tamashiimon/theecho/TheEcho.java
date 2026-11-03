@@ -2,8 +2,8 @@ package de.tamashiimon.theecho;
 
 import de.tamashiimon.theecho.commands.EchoCommand;
 import de.tamashiimon.theecho.commands.subcommands.ReloadSubCommand;
-import de.tamashiimon.theecho.features.blocks.BlockRegistry;
-import de.tamashiimon.theecho.features.items.ItemRegistry;
+import de.tamashiimon.theecho.features.BlockRegistry;
+import de.tamashiimon.theecho.features.ItemRegistry;
 import de.tamashiimon.theecho.models.Config;
 import lombok.Getter;
 import org.bukkit.plugin.java.JavaPlugin;

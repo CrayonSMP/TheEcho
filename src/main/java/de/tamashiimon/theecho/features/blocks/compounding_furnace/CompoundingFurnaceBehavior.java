@@ -1,7 +1,7 @@
 package de.tamashiimon.theecho.features.blocks.compounding_furnace;
 
 import de.tamashiimon.theecho.TheEcho;
-import de.tamashiimon.theecho.features.blocks.BlockRegistry;
+import de.tamashiimon.theecho.features.BlockRegistry;
 import de.tamashiimon.theecho.features.blocks.compounding_furnace.models.CompoundingFurnaceData;
 import de.tamashiimon.theecho.features.blocks.compounding_furnace.models.CompoundingFurnaceRecipe;
 import net.momirealms.craftengine.bukkit.api.CraftEngineBlocks;

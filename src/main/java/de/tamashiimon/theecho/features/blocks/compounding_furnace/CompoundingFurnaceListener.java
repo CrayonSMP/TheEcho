@@ -1,7 +1,6 @@
 package de.tamashiimon.theecho.features.blocks.compounding_furnace;
 
-import de.tamashiimon.theecho.TheEcho;
-import de.tamashiimon.theecho.features.blocks.BlockRegistry;
+import de.tamashiimon.theecho.features.BlockRegistry;
 import org.bukkit.Bukkit;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;

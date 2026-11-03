@@ -1,22 +1,28 @@
 package de.tamashiimon.theecho.features.items.scythe;
 
+import net.momirealms.craftengine.bukkit.api.CraftEngineItems;
+import net.momirealms.craftengine.core.util.Key;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
-
-import java.util.ArrayList;
-import java.util.List;
+import org.bukkit.inventory.EquipmentSlot;
+import org.bukkit.inventory.ItemStack;
 
 public class ScytheListener implements Listener {
-    public static List<ScytheSettings> scytheSettings = new ArrayList<>();
+    @EventHandler(priority = EventPriority.LOWEST, ignoreCancelled = true)
+    public void onLeftClick(PlayerInteractEvent event) {
+        if (event.getAction() != Action.LEFT_CLICK_BLOCK) return;
+        if (event.getHand() != EquipmentSlot.HAND) return;
 
-    @EventHandler
-    public void onInteract(PlayerInteractEvent event) {
-        Action action = event.getAction();
+        ItemStack item = event.getItem();
+        if (item == null || item.getType().isAir()) return;
 
-        if (action == Action.LEFT_CLICK_BLOCK) {
-            if ()
-        }
+        Key id = CraftEngineItems.getCustomItemId(item);
+        if (id == null) id = Key.of(item.getType().getKey().toString());
+
+        ScytheBehavior behavior = ScytheBehavior.REGISTERED.get(id);
+        if (behavior != null) behavior.handleLeftClick(event, item);
     }
 }

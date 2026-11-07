@@ -4,6 +4,8 @@ import net.momirealms.craftengine.bukkit.api.CraftEngineBlocks;
 import net.momirealms.craftengine.bukkit.api.CraftEngineItems;
 import net.momirealms.craftengine.core.block.ImmutableBlockState;
 import net.momirealms.craftengine.core.block.UpdateFlags;
+import net.momirealms.craftengine.core.block.property.IntegerProperty;
+import net.momirealms.craftengine.core.block.property.Property;
 import net.momirealms.craftengine.core.item.behavior.ItemBehavior;
 import net.momirealms.craftengine.core.item.behavior.ItemBehaviorFactory;
 import net.momirealms.craftengine.core.pack.Pack;
@@ -45,8 +47,28 @@ public class ScytheBehavior extends ItemBehavior implements Listener {
         if (block == null || !isCrop(block)) return;
 
         event.setCancelled(true);
+
+        // Nur ausgewachsene Pflanzen ernten
+        if (!isFullyGrown(block)) return;
+
         dropLoot(block, item, event.getPlayer(), dropMultiplier);
         resetCrop(block);
+    }
+
+    private boolean isFullyGrown(Block block) {
+        ImmutableBlockState state = CraftEngineBlocks.getCustomBlockState(block);
+        if (state != null) {
+            Property<?> property = state.owner().value().getProperty("age");
+            if (property instanceof IntegerProperty ageProperty) {
+                return state.get(ageProperty) >= ageProperty.max;
+            }
+            return false;
+        }
+
+        if (block.getBlockData() instanceof Ageable ageable) {
+            return ageable.getAge() >= ageable.getMaximumAge();
+        }
+        return false;
     }
 
     private static final Key CROPS_TAG = Key.of("minecraft:crops");

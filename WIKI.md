@@ -61,6 +61,19 @@ recipes:
     processing_time: 200      # ticks (20 = 1 s)
 ```
 
+### CraftEngineRecipe (recipe viewer)
+
+Optional. If the plugin `CraftEngineRecipe` is installed, all compounding furnace recipes are published to it on startup and on `/theecho reload` (display only, the furnace logic stays in TheEcho).
+
+```yaml
+compounding-furnace:
+  cer-workstation: "theecho:compounding_furnace"   # item id shown as the workstation
+```
+
+- `cer-workstation` must be a CraftEngine item id (`namespace:path`) with an icon.
+- Fuel and tool are shown as normal ingredients with a label; the processing time is shown as a note.
+- A server admin has to assign the recipes to a category once in `/cer manage`, otherwise they stay hidden (CER whitelist model).
+
 - Item format: `namespace:id` or `namespace:id[amount=N]` (default 1).
 - Always write vanilla items with the `minecraft:` namespace.
 - The recipe ID must be a valid namespaced key.

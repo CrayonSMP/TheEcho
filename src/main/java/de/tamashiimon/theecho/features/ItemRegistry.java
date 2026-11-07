@@ -26,7 +26,7 @@ public class ItemRegistry {
 
 
     private void registerBehaviors() {
-        ItemBehaviors.register(behaviorKey("compoundingfurnace"), ScytheBehavior.FACTORY);
+        ItemBehaviors.register(behaviorKey("scythe"), ScytheBehavior.FACTORY);
     }
 
     private void registerListeners() {

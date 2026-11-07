@@ -2,6 +2,8 @@ debug-mode: false
 compounding-furnace:
   # MiniMassage support
   inventory-title: "Compounding Furnace"
+  # Item id of the furnace block/item, shown as workstation in CraftEngineRecipe (optional, needs CraftEngineRecipe).
+  cer-workstation: "theecho:compounding_furnace"
   slots:
     input1-slot: 10
     input2-slot: 11

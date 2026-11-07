@@ -87,6 +87,14 @@
         </dependency>
 
         <dependency>
+            <groupId>dev.che1s</groupId>
+            <artifactId>api</artifactId>
+            <version>1.1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/CraftEngineRecipe-1.1.0-api.jar</systemPath>
+        </dependency>
+
+        <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.18.48</version>

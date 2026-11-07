@@ -3,6 +3,8 @@ package de.tamashiimon.theecho.features;
 import de.tamashiimon.theecho.features.blocks.compounding_furnace.CompoundingFurnaceBehavior;
 import de.tamashiimon.theecho.features.blocks.compounding_furnace.CompoundingFurnaceListener;
 import de.tamashiimon.theecho.features.blocks.compounding_furnace.CompoundingFurnaceService;
+import de.tamashiimon.theecho.TheEcho;
+import de.tamashiimon.theecho.models.Config;
 import lombok.Getter;
 import net.momirealms.craftengine.core.block.behavior.BlockBehaviors;
 import net.momirealms.craftengine.core.util.Key;
